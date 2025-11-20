@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "boodio",
-    "slug": "boodio",
-    "scheme": "boodio",
+    "name": "starter-app",
+    "slug": "starter-app",
+    "scheme": "starter-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -31,11 +31,11 @@
       [
         "expo-router",
         {
-          "origin": "https://boodio.app"
+          "origin": "https://starter-app.app"
         }
       ],
-      "expo-audio"
-     
+      "expo-audio",
+      "expo-secure-store"
     ]
   }
 }
