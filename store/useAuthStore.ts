@@ -28,7 +28,7 @@ interface AuthState {
   
   // Actions (functions to modify state)
   login: (credentials: LoginRequest) => Promise<void>;
-  signup: (userData: SignupRequest) => Promise<void>;
+  signup: (userData: SignupRequest) => Promise<void|void>;
   logout: () => Promise<void>;
   loadStoredAuth: () => Promise<void>;
   clearError: () => void;
@@ -129,11 +129,12 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       // Call backend signup API
       await authApi.signup(userData);
       
-      // After successful signup, login automatically
-      await get().login({
-        email: userData.email,
-        password: userData.password,
-      });
+      // // After successful signup, login automatically
+      // await get().login({
+      //   email: userData.email,
+      //   password: userData.password,
+      // });
+      set({isLoading:false,error:null});
       
       console.log('✅ Signup successful');
     } catch (error: any) {

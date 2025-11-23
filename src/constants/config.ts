@@ -14,7 +14,7 @@
  */
 
 // You'll set this in .env file
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:8000';
+const API_URL = process.env.EXPO_PUBLIC_API_URL
 
 export const API_CONFIG = {
   BASE_URL: API_URL,
@@ -82,15 +82,15 @@ export const FILE_CONFIG = {
  */
 export const STORAGE_KEYS = {
   // Auth
-  AUTH_TOKEN: '@flexdoc/auth_token',
-  USER_DATA: '@flexdoc/user_data',
+  AUTH_TOKEN: 'flexdoc_auth_token',
+  USER_DATA: 'flexdoc_user_data',
   
   // Preferences
-  THEME: '@flexdoc/theme',
-  ONBOARDING_COMPLETED: '@flexdoc/onboarding_completed',
+  THEME: 'flexdoc_theme',
+  ONBOARDING_COMPLETED: 'flexdoc_onboarding_completed',
   
   // Cache
-  FILES_CACHE: '@flexdoc/files_cache',
+  FILES_CACHE: 'flexdoc_files_cache',
 } as const;
 
 /**
